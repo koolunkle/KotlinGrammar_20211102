@@ -72,5 +72,62 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        btnCondition02.setOnClickListener {
+
+//            장기 근속의 3대요소. 1. 연봉높음 2. 거리 3. 칼퇴
+
+            val aCompanySalary = 5800
+            val aCompanyMinute = 20
+            val aCompanyFinishEalry = true
+
+//            1번 지원자는 A회사에 취업할까?
+//             연봉만 5천이상이면 OK
+
+            if ( aCompanySalary >= 5000 ) {
+                Log.d("1번지원자", "취업 OK")
+            }
+            else {
+                Log.d("1번지원자", "다른회사")
+            }
+
+//            2번지원자는 출퇴근이 10분 이내면 취업.
+
+            if (aCompanyMinute <= 10) {
+                Log.d("2번지원자", "취업 OK")
+            }
+            else {
+                Log.d("2번지원자", "다른회사")
+            }
+
+//            3번지원자는 칼퇴하는 회사면 취업
+
+            if (aCompanyFinishEalry) {
+                Log.d("3번지원자", "취업 OK")
+            }
+            else {
+                Log.d("3번지원자", "다른회사")
+            }
+
+//            4번지원자는 연봉이 4천 이상, 거리도 10분 이내
+
+            if (aCompanySalary >= 4000 && aCompanyMinute <= 10) {
+                Log.d("4번지원자", "취업 OK")
+            }
+            else {
+                Log.d("4번지원자", "다른회사")
+            }
+
+//            5번지원자는 거리가 20분 이내거나, 칼퇴하거나
+
+            if (aCompanyMinute <= 20 || aCompanyFinishEalry) {
+                Log.d("5번지원자", "취업 OK")
+            }
+            else {
+                Log.d("5번지원자", "다른회사")
+            }
+
+
+        }
+
     }
 }

@@ -35,5 +35,20 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        btnVariable02.setOnClickListener {
+//            변수를 만들고 -> 바로 데이터 대입.
+//            보통은 val로 만든다.
+
+            val myBirthYear = 1996 // 대입한 값의 형태? 정수 (Int) => myBirthYear도 Int 형태로 결정됨.
+
+            Log.d("출생년도", myBirthYear.toString())
+
+//            2021년의 나이는 몇살?
+            val myKoreanAge = 2021 - myBirthYear + 1  // 변수를 대입할때, 기능 실행(계산식)의 결과를 바로 대입 가능.
+
+            Log.d("나이", myKoreanAge.toString())
+
+        }
+
     }
 }
